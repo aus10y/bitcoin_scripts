@@ -13,6 +13,6 @@ install: btc_price.py btc_fees.py
 	@echo "Copied scripts to ~/.local/bin, and set as executable."
 
 clean:
-	@rm ~/.local/bin/${BTC_PRICE}
-	@rm ~/.local/bin/${BTC_FEES}
+	@rm -f ~/.local/bin/${BTC_PRICE}
+	@rm -f ~/.local/bin/${BTC_FEES}
 	@echo "Removed ${BTC_PRICE} and ${BTC_FEES} from ~/.local/bin/"
