@@ -3,7 +3,7 @@ BTC_FEES_SCRIPT = btc_fees.py
 BTC_PRICE = btc_price
 BTC_FEES = btc_fees
 
-.PHONY: install clean
+.PHONY: install uninstall
 
 install: btc_price.py btc_fees.py
 	@cp ${BTC_PRICE_SCRIPT} ~/.local/bin/${BTC_PRICE}
@@ -12,7 +12,7 @@ install: btc_price.py btc_fees.py
 	@chmod +x ~/.local/bin/${BTC_FEES}
 	@echo "Copied scripts to ~/.local/bin, and set as executable."
 
-clean:
+uninstall:
 	@rm -f ~/.local/bin/${BTC_PRICE}
 	@rm -f ~/.local/bin/${BTC_FEES}
 	@echo "Removed ${BTC_PRICE} and ${BTC_FEES} from ~/.local/bin/"
