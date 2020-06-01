@@ -3,9 +3,12 @@ BTC_FEES_SCRIPT = btc_fees.py
 BTC_PRICE = btc_price
 BTC_FEES = btc_fees
 
-.PHONY: install uninstall
+.PHONY: help install uninstall
 
-install: btc_price.py btc_fees.py
+help:
+	@echo "Run 'make install' or 'make uninstall'"
+
+install:
 	@cp ${BTC_PRICE_SCRIPT} ~/.local/bin/${BTC_PRICE}
 	@chmod +x ~/.local/bin/${BTC_PRICE}
 	@cp ${BTC_FEES_SCRIPT} ~/.local/bin/${BTC_FEES}
